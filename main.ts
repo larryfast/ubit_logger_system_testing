@@ -1,14 +1,13 @@
-radio.onReceivedNumber(function (receivedNumber) {
-    z = receivedNumber % 10
+radio.onReceivedValue(function (name, value) {
+    serial.writeValue(name, value)
+    received = 1
 })
-input.onButtonPressed(Button.A, function () {
-	
-})
-let z = 0
-z = 0
+let received = 0
 radio.setGroup(1)
 basic.forever(function () {
-    led.toggle(0, 0)
-    basic.showString("" + (z))
-    basic.pause(500)
+    if (received == 1) {
+        received = 0
+        led.toggle(2, 2)
+    }
+    basic.pause(100)
 })

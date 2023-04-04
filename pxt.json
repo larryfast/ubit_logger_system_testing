@@ -1,5 +1,5 @@
 {
-    "name": "receivertest",
+    "name": "radio2serial_ubit",
     "description": "",
     "dependencies": {
         "core": "*",
