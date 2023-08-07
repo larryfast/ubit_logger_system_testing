@@ -3,7 +3,7 @@ radio.onReceivedValue(function (name, value) {
     received = 1
 })
 let received = 0
-radio.setGroup(1)
+radio.setGroup(0)
 basic.forever(function () {
     if (received == 1) {
         received = 0
