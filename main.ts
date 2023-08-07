@@ -8,6 +8,8 @@ basic.forever(function () {
     if (received == 1) {
         received = 0
         led.toggle(2, 2)
+    } else {
+        led.toggle(4, 4)
     }
-    basic.pause(100)
+    basic.pause(500)
 })
