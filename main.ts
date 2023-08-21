@@ -4,6 +4,7 @@ radio.onReceivedValue(function (name, value) {
 })
 let received = 0
 radio.setGroup(0)
+basic.showNumber(0)
 basic.forever(function () {
     if (received == 1) {
         received = 0
@@ -11,5 +12,5 @@ basic.forever(function () {
     } else {
         led.toggle(4, 4)
     }
-    basic.pause(500)
+    basic.pause(1000)
 })
